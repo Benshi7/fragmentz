@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react'
 
 const ServiceItem = ({ name }) => (
   <div>{name}</div>
-);
+)
 
 const ServiceList = () => (
   <div className="flex gap-5 justify-between px-5 mt-1.5 w-full text-base tracking-normal text-white whitespace-nowrap max-w-[746px] max-md:flex-wrap max-md:max-w-full">
@@ -10,9 +10,9 @@ const ServiceList = () => (
       <ServiceItem key={service} name={service} />
     ))}
   </div>
-);
+)
 
-function Services() {
+function Services () {
   return (
     <section className="flex flex-col items-center">
       <header className="flex gap-5 justify-between self-stretch w-full max-md:flex-wrap max-md:max-w-full">
@@ -32,7 +32,7 @@ function Services() {
       />
       <ServiceList />
     </section>
-  );
+  )
 }
 
 export default Services

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 // Reusable TextInput component
 const TextInput = ({ label, type }) => (
@@ -12,7 +12,7 @@ const TextInput = ({ label, type }) => (
       aria-label={label}
     />
   </>
-);
+)
 
 // Reusable TextArea component
 const TextArea = ({ label }) => (
@@ -25,9 +25,9 @@ const TextArea = ({ label }) => (
       aria-label={label}
     />
   </>
-);
+)
 
-function Contact() {
+function Contact () {
   return (
     <section className="flex justify-center items-center px-16 py-6 bg-zinc-900 max-md:px-5">
       <div className="w-full max-w-[897px] md:max-w-full">
@@ -60,7 +60,7 @@ function Contact() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-export default Contact;
+export default Contact

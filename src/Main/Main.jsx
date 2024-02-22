@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Main() {
+function Main () {
   return (
     <main className="flex flex-col px-5 max-w-[1440px]">
       <header className="text-4xl font-bold tracking-wide leading-5 text-violet-100 max-md:mr-2 max-md:max-w-full">
@@ -14,10 +14,10 @@ function Main() {
         </div>
       </section>
     </main>
-  );
+  )
 }
 
-function ServiceDescription() {
+function ServiceDescription () {
   return (
     <div className="flex flex-col w-[66%] max-md:ml-0 max-md:w-full">
       <div className="flex flex-col self-stretch my-auto max-md:mt-10 max-md:max-w-full">
@@ -25,17 +25,17 @@ function ServiceDescription() {
           Fancy projects for your ideas!
         </h2>
         <p className="mt-4 text-lg tracking-normal leading-5 text-white max-md:max-w-full">
-          As a new user, you can explore our web development services without technical expertise. Once you've contacted us, we will guide you through the process of creating your ideal website!
+          As a new user, you can explore our web development services without technical expertise. Once you have contacted us, we will guide you through the process of creating your ideal website!
         </p>
         <button className="justify-center self-start px-5 py-4 mt-9 text-base font-semibold tracking-normal text-center text-white whitespace-nowrap rounded-lg bg-violet-950" tabIndex="0">
           Learn More
         </button>
       </div>
     </div>
-  );
+  )
 }
 
-function ServiceImage() {
+function ServiceImage () {
   return (
     <div className="flex flex-col ml-5 w-[23%] max-md:ml-0 max-md:w-full">
       <img
@@ -45,7 +45,7 @@ function ServiceImage() {
         className="grow w-full aspect-[1.37] max-md:mt-10"
       />
     </div>
-  );
+  )
 }
 
-export default Main;
+export default Main
