@@ -8,6 +8,7 @@ import Services from './Services/Services'
 import Contact from './Contact/Contact'
 import Footer from './Footer/Footer'
 
+
 function App () {
   return (
     <>
@@ -15,6 +16,7 @@ function App () {
       <br />
       <Main />
       <Skills />
+      <br />
       <Projects />
       <Services />
       <Contact />

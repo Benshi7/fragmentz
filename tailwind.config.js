@@ -1,38 +1,44 @@
+const { nextui } = require('@nextui-org/react')
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
     './index.html',
-    './src/**/*.{js,ts,jsx,tsx}'
+    './src/**/*.{js,ts,jsx,tsx}',
+    './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['Inter', 'sans-serif']
-      }
-    }
-  },
-  plugins: [
-    require('daisyui')
-  ],
-  daisyui: {
-    themes: [
-      {
-        fragmentz: {
-          primary: '#a991f7',
-          secondary: '#f6d860',
-          accent: '#37cdbe',
-          neutral: '#3d4451',
-          'base-100': '#ffffff'
-        }
+      colors: {
+        white: "#FFFFFF",
+        black: "#000000",
+        blue: {
+          50: "#e6f1fe",
+          100: "#cce3fd",
+          200: "#99c7fb",
+          300: "#66aaf9",
+          400: "#338ef7",
+          500: "#006FEE",
+          600: "#005bc4",
+          700: "#004493",
+          800: "#002e62",
+          900: "#001731",
+        },
+        // .. rest of the colors
       },
-      'dark'
-    ], // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
-    darkTheme: 'dark', // name of one of the included themes for dark mode
-    base: true, // applies background color and foreground color for root element by default
-    styled: true, // include daisyUI colors and design decisions for all components
-    utils: true, // adds responsive and modifier utility classes
-    prefix: '', // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
-    logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
-    themeRoot: ':root' // The element that receives theme color CSS variables
-  }
+    },
+  },
+  darkMode: 'class', // or 'media' or 'class'
+  plugins: [
+    nextui({
+      themes: {
+        dark: {
+          colors: {
+            background: "#121212",
+            foreground: "#FFFFFF",
+            primary: "#653DB3",
+          }
+        }
+      }
+    })]
 }

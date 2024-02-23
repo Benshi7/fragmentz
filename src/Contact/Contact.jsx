@@ -1,6 +1,8 @@
 import React from 'react'
+import {Input} from "@nextui-org/react";
+import {Textarea} from "@nextui-org/react";
 
-// Reusable TextInput component
+// Reusable Input component
 const TextInput = ({ label, type }) => (
   <>
     <label htmlFor={label.toLowerCase()} className="mt-5 sr-only">{label}</label>
@@ -42,12 +44,14 @@ function Contact () {
           </div>
           <div className="flex flex-col md:w-6/12">
             <form className="flex flex-col grow text-base font-semibold tracking-normal text-white md:mt-10">
-              <div className="text-5xl font-bold tracking-wide md:text-4xl">
+              <div className="text-5xl mb-4 font-bold tracking-wide md:text-4xl">
                 Get in touch!
               </div>
-              <TextInput label="Name" type="text" />
-              <TextInput label="Email" type="email" />
-              <TextArea label="Message" />
+              <Input label="Name" type="text" />
+              <br />
+              <Input label="Email" type="email" />
+              <br />
+              <Textarea label="Message" />
               <button
                 type="submit"
                 className="justify-center self-start px-2 py-3.5 mt-6 text-base tracking-normal text-center text-white whitespace-nowrap rounded-lg bg-violet-950"

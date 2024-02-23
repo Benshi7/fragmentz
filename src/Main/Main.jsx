@@ -1,4 +1,5 @@
 import React from 'react'
+import {Button} from "@nextui-org/react";
 
 function Main () {
   return (
@@ -27,9 +28,9 @@ function ServiceDescription () {
         <p className="mt-4 text-lg tracking-normal leading-5 text-white max-md:max-w-full">
           As a new user, you can explore our web development services without technical expertise. Once you have contacted us, we will guide you through the process of creating your ideal website!
         </p>
-        <button className="justify-center self-start px-5 py-4 mt-9 text-base font-semibold tracking-normal text-center text-white whitespace-nowrap rounded-lg bg-violet-950" tabIndex="0">
+        <Button className="justify-center self-start px-5 py-4 mt-9 ml-6 text-base font-semibold tracking-normal rounded-lg bg-violet-950" tabIndex="0">
           Learn More
-        </button>
+        </Button>
       </div>
     </div>
   )
