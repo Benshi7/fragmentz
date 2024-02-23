@@ -1,11 +1,11 @@
 import React from 'react'
-import {Button} from "@nextui-org/react";
+import { Button } from '@nextui-org/react'
 
 function Main () {
   return (
     <main className="flex flex-col px-5 max-w-[1440px]">
-      <header className="text-4xl font-bold tracking-wide leading-5 text-violet-100 max-md:mr-2 max-md:max-w-full">
-        Discover Our Web Development Services
+      <header className="text-3xl font-bold tracking-wide leading-5 text-violet-100 xs:text-blue max-md:mr-2 max-md:max-w-full">
+        <h1 className="lg:text-4xl md:text-3xl sm:text-3xl leading-snug">Discover Our Web Development Services</h1>
       </header>
       <section className="w-full max-md:max-w-full">
         <br />

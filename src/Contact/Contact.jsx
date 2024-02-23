@@ -1,11 +1,10 @@
 import React from 'react'
-import {Input} from "@nextui-org/react";
-import {Textarea} from "@nextui-org/react";
+import { Input, Textarea } from '@nextui-org/react'
 
 // Reusable Input component
 const TextInput = ({ label, type }) => (
   <>
-    <label htmlFor={label.toLowerCase()} className="mt-5 sr-only">{label}</label>
+    <label htmlFor={label.toLowerCase()} className='mt-5 sr-only'>{label}</label>
     <input
       type={type}
       id={label.toLowerCase()}
