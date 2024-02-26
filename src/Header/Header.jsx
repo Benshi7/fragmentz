@@ -1,6 +1,7 @@
 import React from 'react'
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button} from "@nextui-org/react";
 import {AcmeLogo} from "./AcmeLogo.jsx";
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -11,18 +12,18 @@ const Header = () => {
         </NavbarBrand>
         <NavbarContent className="hidden sm:flex gap-4" justify="center">
           <NavbarItem>
-            <Link color="foreground" href="#">
-              Home
+            <Link color="foreground">
+              <NavLink to="/" exact>Home</NavLink>
             </Link>
           </NavbarItem>
           <NavbarItem isActive>
-            <Link href="#" aria-current="page">
-              Skills
+            <Link  aria-current="page">
+              <NavLink to="/skills" exact>Skills</NavLink>
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link color="foreground" href="#">
-              Projects
+            <Link  color="foreground">
+              <NavLink to="/projects" exact>Projects</NavLink>
             </Link>
           </NavbarItem>
         </NavbarContent>

@@ -1,28 +1,25 @@
-import { React } from 'react'
-import './App.css'
-import Header from './Header/Header'
-import Main from './Main/Main'
-import Skills from './Skills/Skills'
-import Projects from './Projects/Projects'
-import Services from './Services/Services'
-import Contact from './Contact/Contact'
-import Footer from './Footer/Footer'
+import React from 'react';
+import './App.css';
+import Header from './Header/Header';
+import Footer from './Footer/Footer';
+import Home from './Home';
+import SkillsPage from './SkillsPage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-
-function App () {
+function App() {
   return (
     <>
-      <Header />
-      <br />
-      <Main />
-      <Skills />
-      <br />
-      <Projects />
-      <Services />
-      <Contact />
-      <Footer />
+      <Router>
+        <Header />
+        <br />
+        <Routes>
+          <Route path="/" exact Component={Home}/>
+          <Route path="/skills" exact Component={SkillsPage}/>
+        </Routes>
+        <Footer />
+      </Router>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
