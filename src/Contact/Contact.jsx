@@ -33,17 +33,17 @@ function Contact () {
     <section className="flex justify-center items-center px-16 py-6 bg-zinc-900 max-md:px-5">
       <div className="w-full max-w-[897px] md:max-w-full">
         <div className="flex flex-col md:flex-row md:gap-5">
-          <div className="flex flex-col md:w-6/12">
+          <div className="flex flex-col md:w-3/12 ml-64">
             <img
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/0efcc974d3ecdb445f4ade649842a5ed77ab4134a0029c7aea53343685c0ca18?apiKey=50330f3fd48f47a5b9d1c8ef649e9298&"
               alt="Contact Us Image"
-              className="self-stretch my-auto w-full aspect-[1.27] md:mt-10 max-w-[400px] md:max-w-full"
+              className="self-stretch my-auto w-full aspect-[1.27] md:mt-12 mx-24 max-w-[400px] md:max-w-full"
               loading="lazy"
             />
           </div>
-          <div className="flex flex-col md:w-6/12">
+          <div className="flex flex-col ml-56 md:w-3/12">
             <form className="flex flex-col grow text-base font-semibold tracking-normal text-white md:mt-10">
-              <div className="text-5xl mb-4 font-bold tracking-wide md:text-4xl">
+              <div className="text-4xl mb-4 font-bold tracking-wide md:text-4xl">
                 Get in touch!
               </div>
               <Input label="Name" type="text" />

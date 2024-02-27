@@ -3,7 +3,7 @@ import { Button } from '@nextui-org/react'
 
 function Main () {
   return (
-    <main className="flex flex-col px-5 max-w-[1440px]">
+    <main className="flex flex-col px-5 md:px-64 py-10 max-md:px-5">
       <header className="text-3xl font-bold tracking-wide leading-5 text-violet-100 xs:text-blue max-md:mr-2 max-md:max-w-full">
         <h1 className="lg:text-4xl md:text-3xl sm:text-3xl leading-snug">Discover Our Web Development Services</h1>
       </header>
@@ -25,12 +25,14 @@ function ServiceDescription () {
         <h2 className="text-3xl font-bold tracking-normal leading-5 text-violet-500 max-md:max-w-full">
           Fancy projects for your ideas!
         </h2>
-        <p className="mt-4 text-lg tracking-normal leading-5 text-white max-md:max-w-full">
+        <p className="mt-4 text-lg tracking-normal leading-5 mx-32 text-secondary max-md:max-w-full">
           As a new user, you can explore our web development services without technical expertise. Once you have contacted us, we will guide you through the process of creating your ideal website!
         </p>
-        <Button className="justify-center self-start px-5 py-4 mt-9 ml-6 text-base font-semibold tracking-normal rounded-lg bg-violet-950" tabIndex="0">
+        <div className="flex justify-center items-center max-md:mt-10">
+        <Button className="justify-center w-32 px-5 py-4 mt-9 ml-14 text-base font-semibold tracking-normal rounded-lg bg-violet-950 text-secondary" tabIndex="0">
           Learn More
         </Button>
+        </div>
       </div>
     </div>
   )

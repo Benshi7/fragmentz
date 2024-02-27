@@ -12,6 +12,7 @@ export default {
       colors: {
         white: '#FFFFFF',
         black: '#000000',
+        gray: '#D1D1D1',
         blue: {
           50: '#e6f1fe',
           100: '#cce3fd',
@@ -33,6 +34,7 @@ export default {
     extend: {
       animation: {
         "meteor-effect": "meteor 5s linear infinite",
+        "spotlight": "spotlight 2s ease .75s 1 forwards",
       },
       keyframes: {
 
@@ -42,6 +44,15 @@ export default {
           "100%": {
             transform: "rotate(215deg) translateX(-500px)",
             opacity: 0,
+          }},
+        spotlight: {
+          "0%": {
+            opacity: 0,
+            transform: "translate(-72%, -62%) scale(0.5)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translate(-50%,-40%) scale(1)",
           },
         },
       },
@@ -56,7 +67,9 @@ export default {
           colors: {
             background: '#121212',
             foreground: '#FFFFFF',
-            primary: '#653DB3'
+            primary: '#653DB3',
+            secondary: '#EDE9FE',
+            gray: '#D1D1D1'
           }
         }
       }

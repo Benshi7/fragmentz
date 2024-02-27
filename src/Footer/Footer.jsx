@@ -13,7 +13,7 @@ const FooterText = () => (
 const Footer = () => {
   const brandImages = [
     {
-      src: 'https://cdn.builder.io/api/v1/image/assets/TEMP/654413f8a34d19202bacdb7b5c91a26aba221dc1fa77ab38e0218e0711600?apiKey=50330f3fd48f47a5b9d1c8ef649e9298&',
+      src: 'https://i.imgur.com/orpz3Aq.png',
       alt: 'Brand Logo 1',
       className: 'self-stretch my-auto aspect-[1.02] fill-neutral-300 w-[50px]'
     },
@@ -30,7 +30,7 @@ const Footer = () => {
     {
       src: 'https://cdn.builder.io/api/v1/image/assets/TEMP/b07c243edc3ec4ae340e586461346a8051e1f2c5153522ab0a75e4369f3360ef?apiKey=50330f3fd48f47a5b9d1c8ef649e9298&',
       alt: 'Brand Logo 4',
-      className: 'mt-1 aspect-square w-[51px]'
+      className: 'mt-1 aspect-square w-[50px]'
     }
   ]
 

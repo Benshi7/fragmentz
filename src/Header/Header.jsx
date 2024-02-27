@@ -5,32 +5,32 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
-      <Navbar>
-        <NavbarBrand>
-          <AcmeLogo />
-          <p className="font-bold text-inherit">FRAGMENTZ</p>
+      <Navbar className="text-secondary">
+        <NavbarBrand className="text-primary">
+          <img src={"https://i.imgur.com/B9CXwja.png"} alt="Fragmentz Logo"/>
+          <p className="font-bold text-inherit text-secondary">FRAGMENTZ</p>
         </NavbarBrand>
         <NavbarContent className="hidden sm:flex gap-4" justify="center">
           <NavbarItem>
-            <Link color="foreground">
+            <Link color="secondary">
               <NavLink to="/" exact>Home</NavLink>
             </Link>
           </NavbarItem>
-          <NavbarItem isActive>
-            <Link  aria-current="page">
+          <NavbarItem>
+            <Link aria-current="page" color="secondary">
               <NavLink to="/skills" exact>Skills</NavLink>
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link  color="foreground">
+            <Link color="secondary">
               <NavLink to="/projects" exact>Projects</NavLink>
             </Link>
           </NavbarItem>
         </NavbarContent>
         <NavbarContent justify="end">
           <NavbarItem>
-            <Button as={Link} color="primary" href="#" variant="flat">
-              Hire us!
+            <Button as={Link} color="primary" variant="flat">
+              <NavLink to="/contact" exact className="text-secondary">Contact Us</NavLink>
             </Button>
           </NavbarItem>
         </NavbarContent>
