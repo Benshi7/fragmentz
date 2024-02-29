@@ -5,7 +5,9 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
-      <Navbar className="text-secondary">
+      <Navbar className="text-secondary bg-gray" css={{
+        $$navbarBackgroundColor: "red",
+        $$navbarBlurBackgroundColor: "red"}}>
         <NavbarBrand className="text-primary">
           <img src={"https://i.imgur.com/B9CXwja.png"} alt="Fragmentz Logo"/>
           <p className="font-bold text-inherit text-secondary">FRAGMENTZ</p>

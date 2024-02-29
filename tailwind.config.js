@@ -12,7 +12,8 @@ export default {
       colors: {
         white: '#FFFFFF',
         black: '#000000',
-        gray: '#D1D1D1',
+        grays: '#D1D1D1',
+        purple: '#EDE9FE',
         blue: {
           50: '#e6f1fe',
           100: '#cce3fd',
@@ -24,8 +25,20 @@ export default {
           700: '#004493',
           800: '#002e62',
           900: '#001731'
-        }
-        // .. rest of the colors
+        },
+        christalle: {
+          50: '#f9f6fe',
+          100: '#f2e9fe',
+          200: '#e6d8fc',
+          300: '#d3b9f9',
+          400: '#b98cf4',
+          500: '#9e5fed',
+          600: '#873fde',
+          700: '#722dc3',
+          800: '#622a9f',
+          900: '#502380',
+          950: '#390e66',
+      },        // .. rest of the colors
       }
     }
 
@@ -69,7 +82,21 @@ export default {
             foreground: '#FFFFFF',
             primary: '#653DB3',
             secondary: '#EDE9FE',
-            gray: '#D1D1D1'
+            grays: '#D1D1D1',
+            purple: '#EDE9FE',
+            christalle: {
+              50: '#f9f6fe',
+              100: '#f2e9fe',
+              200: '#e6d8fc',
+              300: '#d3b9f9',
+              400: '#b98cf4',
+              500: '#9e5fed',
+              600: '#873fde',
+              700: '#722dc3',
+              800: '#622a9f',
+              900: '#502380',
+              950: '#390e66',
+          },
           }
         }
       }
