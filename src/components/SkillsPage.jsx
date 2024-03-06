@@ -1,3 +1,4 @@
+import React from "react";
 import Contact from "./Contact/Contact";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
@@ -5,9 +6,9 @@ import {
   GlowingStarsBackgroundCard,
   GlowingStarsDescription,
   GlowingStarsTitle,
-} from "./ui/glowing-stars";
+} from "../ui/glowing-stars";
 
-import { Meteors } from "./ui/meteors";
+import { Meteors } from "../ui/meteors";
 
 
 export function GlowingStarsBackgroundCardPreview() {

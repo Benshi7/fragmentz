@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import { ScrollParallax } from 'react-just-parallax'
+import { BackgroundCircles } from '../design/Hero'
+import EngineerSvg from '../../assets/svgs/undraw_software_engineer.svg'
+
 
 function SkillCard ({ title, description, imageSrc, imageAlt }) {
   return (
-    <section className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+    <section className="flex flex-col mt-8 ml-5 w-6/12 max-md:ml-0 max-md:w-full">
       <h2 className="text-3xl font-bold tracking-normal text-center text-violet-500 max-md:max-w-full">{title}</h2>
       <p className="mt-5 text-lg tracking-normal leading-5 text-white max-md:max-w-full">{description}</p>
       <img loading="lazy" src={imageSrc} alt={imageAlt} className="self-center mt-6 max-w-full aspect-[3.7] w-[346px]" />
@@ -11,6 +15,9 @@ function SkillCard ({ title, description, imageSrc, imageAlt }) {
 }
 
 export default function Skills () {
+
+  const parallaxRef = useRef(null)
+
   const skills = [
     {
       title: 'Web-Development Skills',
@@ -21,13 +28,13 @@ export default function Skills () {
   ]
 
   return (
-    <main className="flex flex-col items-center px-16 pt-12 bg-zinc-900 max-md:px-5">
+    <main className="flex flex-col items-center xl:px-80 pt-12max-md:px-5" ref={parallaxRef}>
       <section className="w-full max-w-[927px] max-md:max-w-full">
-        <div className="flex gap-5 max-md:flex-col max-md:gap-0">
-          <article className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
+        <div className="flex gap-5 max-md:flex-col max-md:gap-0 items-center">
+          <article className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full md:w-[45%] sm:w-[66%]">
             <img
               loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/f698a4ff3b1d7906aad07c915aeffbae6da797841858f66d3ae5717fcd103d81?apiKey=50330f3fd48f47a5b9d1c8ef649e9298&"
+              src={EngineerSvg}
               alt="Decorative"
               className="w-full aspect-[1.59] max-md:mt-10"
             />
@@ -38,6 +45,7 @@ export default function Skills () {
           ))}
         </div>
       </section>
+      <BackgroundCircles />
     </main>
   )
 }
