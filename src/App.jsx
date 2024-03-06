@@ -13,7 +13,9 @@ function App() {
     <>
       <Router>
         <Header />
-        <br />
+        <>
+        <StarrySky/>
+        </>
         <Routes>
           <Route path="/" exact Component={Home}/>
           <Route path="/skills" exact Component={SkillsPage}/>

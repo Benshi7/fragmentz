@@ -34,7 +34,7 @@ const ContactPage = () => {
               <Textarea className="my-4" label="Message" />
               <button
                 type="submit"
-                className="justify-center self-end px-2 py-2 mt-2 text-base tracking-normal text-center text-primary whitespace-nowrap rounded-lg bg-slate-200 hover:text-black hover:scale-110 transition"
+                className="z-50 justify-center self-end px-2 py-2 mt-2 text-base tracking-normal text-center text-primary whitespace-nowrap rounded-lg bg-slate-200 hover:text-black hover:scale-110 transition"
                 tabIndex="0"
               >
                 SEND MESSAGE

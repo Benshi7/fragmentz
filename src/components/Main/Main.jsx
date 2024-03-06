@@ -38,7 +38,7 @@ function ServiceDescription () {
           You can explore our web development services without technical expertise. Once you have contacted us, we will guide you through the process of creating your ideal website!
         </p>
         <div className="flex max-md:mt-10">
-        <Button className="self-start w-32 px-5 py-4 mt-9 text-base font-semibold tracking-normal rounded-lg bg-violet-950 text-secondary" tabIndex="0">
+        <Button className="z-50 self-start w-32 px-5 py-4 mt-9 text-base font-semibold tracking-normal rounded-lg bg-violet-950 text-secondary" tabIndex="0">
           Learn More
         </Button>
         </div>

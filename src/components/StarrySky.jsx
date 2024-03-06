@@ -50,7 +50,7 @@ export const StarrySky = () => {
   }, []);
 
   return (
-    <div id="App">
+    <div>  
       <svg id="sky">
         {[...Array(num)].map((x, y) => (
           <circle

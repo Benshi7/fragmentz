@@ -35,7 +35,7 @@ const Footer = () => {
   ]
 
   return (
-    <div className="flex flex-col items-center px-16 pt-10 pb-3.5 bg-zinc-900 max-md:px-5">
+    <div className="flex flex-col items-center px-16 pt-10 pb-10 bg-zinc-900 max-md:px-5">
       <div className="flex flex-col max-w-full w-[274px]">
         <div className="flex gap-5 justify-between items-start">
           {brandImages.map((img, index) => (
