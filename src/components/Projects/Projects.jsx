@@ -38,7 +38,7 @@ const Projects = () => {
     <div className="flex flex-col">
         <div className="flex flex-col items-center xl:px-80">
           <h1 className="text-3xl px-16 font-bold self-start tracking-normal text-center text-violet-500 max-md:max-w-full">Projects</h1>
-          <div className="gap-2 grid grid-cols-2 sm:grid-cols-3 mt-8">
+          <div className="gap-8 grid grid-cols-2 sm:grid-cols-3 mt-8">
       {list.map((item, index) => (
         <Card shadow="sm" key={index} isPressable onPress={() => console.log("item pressed")}>
           <CardBody className="overflow-visible p-0">

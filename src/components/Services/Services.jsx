@@ -14,8 +14,8 @@ const ServiceList = () => (
 
 function Services () {
   return (
-    <section className="flex flex-col items-center md:px-64 py-8 max-md:px-5">
-      <header className="flex gap-5 justify-betweenw-full max-md:flex-wrap max-md:max-w-full">
+    <section className="flex flex-col items-center md:px-64 py-8 max-md:px-5 lg:px-[22rem]">
+      <header className="flex gap-5 justify-between w-full max-md:flex-wrap max-md:max-w-full">
         <h1 className="flex flex-col px-5 basis-0">
           <div className="text-3xl font-bold tracking-normal text-white">Our</div>
           <div className="mt-3.5 text-5xl font-semibold tracking-wide text-violet-500 max-md:text-4xl">

@@ -28,10 +28,10 @@ export default function Skills () {
   ]
 
   return (
-    <main className="flex flex-col items-center xl:px-80 pt-12max-md:px-5" ref={parallaxRef}>
+    <main className="flex flex-col items-center xl:px-80 pt-8 max-md:px-12 md:mr-12" ref={parallaxRef}>
       <section className="w-full max-w-[927px] max-md:max-w-full">
-        <div className="flex gap-5 max-md:flex-col max-md:gap-0 items-center">
-          <article className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full md:w-[45%] sm:w-[66%]">
+        <div className="flex gap-18 max-md:flex-col max-md:gap-0 items-center">
+          <article className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full md:w-[45%] sm:w-[46%]">
             <img
               loading="lazy"
               src={EngineerSvg}
