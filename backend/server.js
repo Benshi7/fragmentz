@@ -26,7 +26,6 @@ app.post('/send-email', async (req, res) => {
     secure: false,
     ignoreTLS: true // Ignorar TLS para conexiones no seguras
   })
-
   // Configurar el correo electrónico
   let mailOptions = {
     from: 'tuCorreo@gmail.com', // posiblemente no haga falta tener un remitente, o podemos poner acá el email que llenen en el form, pero no estoy seguro ni es necesario
