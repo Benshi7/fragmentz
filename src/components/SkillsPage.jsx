@@ -1,61 +1,13 @@
 import React from "react";
-import Contact from "./Contact/Contact";
-import Footer from "./Footer/Footer";
-import Header from "./Header/Header";
-import {
-  GlowingStarsBackgroundCard,
-  GlowingStarsDescription,
-  GlowingStarsTitle,
-} from "../ui/glowing-stars";
+import { Link } from "react-router-dom";
 
-import { Meteors } from "../ui/meteors";
-
-
-export function GlowingStarsBackgroundCardPreview() {
+export function SkillCard({title, shortDescription, link, image}) {
   return (
-    <div className="flex py-20 items-center justify-center antialiased">
-      <GlowingStarsBackgroundCard>
-        <GlowingStarsTitle>Next.js 14</GlowingStarsTitle>
-        <div className="flex justify-between items-end">
-          <GlowingStarsDescription>
-            The power of full-stack to the frontend. Read the release notes.
-          </GlowingStarsDescription>
-          <div className="h-8 w-8 rounded-full bg-[hsla(0,0%,100%,.1)] flex items-center justify-center">
-            <Icon />
-          </div>
-        </div>
-      </GlowingStarsBackgroundCard>
-    </div>
-  );
-}
- 
-const Icon = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="currentColor"
-      className="h-4 w-4 text-white stroke-2"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-      />
-    </svg>
-  );
-};
-
-
-export function MeteorsDemo() {
-  return (
-    <div className="">
-      <div className=" h-3/4 md:h-1/2 w-3/4  relative max-w-sm">
-        <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] bg-red-500 rounded-full blur-3xl" />
-        <div className="relative shadow-xl bg-gray-900 border border-gray-800  px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
-          <div className="h-5 w-5 rounded-full border flex items-center justify-center mb-4 border-gray-500">
+    <div className="mx-8 my-8 flex sm:justify-center">
+      <div className="w-full relative h-74 sm:w-80" >
+      <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-christalle-700 to-indigo-500 transform scale-[0.80] bg-christalle-500 rounded-full blur-3xl" />
+      <div className="relative shadow-xl bg-background border border-gray-900 px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
+          <div className="h-5 w-5 rounded-full border flex items-center justify-center mb-2 border-gray-500">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -71,41 +23,43 @@ export function MeteorsDemo() {
               />
             </svg>
           </div>
+          <img src={image} className="h-24 mx-auto my-1 py-0 aspect-auto"/>
 
-          <h1 className="font-bold text-xl text-white mb-4 relative z-50">
-            React 18
+          <h1 className="font-bold text-lg text-white relative z-50 text-left">
+            {title}
           </h1>
-
-          <p className="font-normal text-base text-slate-500 mb-4 relative z-50">
-            React is the most popular front-end library in the world.
+          <p className="font-normal text-sm mb-2 text-slate-500  relative z-50 text-left">
+            {shortDescription}
           </p>
 
-          <button className="border px-4 py-1 rounded-lg  border-gray-500 text-gray-300">
-            Explore
+          <button className="border px-4 py-1 rounded-lg border-gray-500 text-gray-300 self-end">
+            <Link to={link} target="blank">Explore</Link>
           </button>
 
-          {/* Meaty part - Meteor effect */}
-          <Meteors number={20} />
         </div>
       </div>
     </div>
   );
 }
 
-
-function Skill(){
-  return(
-    <>
-      <GlowingStarsBackgroundCardPreview />
-      <MeteorsDemo/>
-    </>
-  )
-}
-
 export default function SkillsPage() {
   return (
     <>
-    <Skill/>
+    <div className="mx-4 mb-16 xl:mx-12 md:mx-12 ">
+      <div className="grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-3 mx-4 md:mx-8 lg:mx-18 xl:mx-48 xl:h-[90%] ">
+        <SkillCard title="HTML" shortDescription={"Hyper Text Marked Language."} link="https://developer.mozilla.org/en-US/docs/Web/HTML" image={"src/assets/htmlLogo.svg"}/>
+        <SkillCard title="CSS" shortDescription={"Cascade Style Sheet."} link={"https://developer.mozilla.org/en-US/docs/Web/CSS"} image={"src/assets/cssLogo.svg"}/>
+        <SkillCard title="JavaScript" shortDescription={"The Word Wide Web programming language."} link={"https://developer.mozilla.org/en-US/docs/Web/JavaScript"} image={"src/assets/jsLogo.svg"}/>
+        <SkillCard title="Tailwind" shortDescription={"CSS framework to create attractive designs."} link={"https://tailwindcss.com/"} image={"src/assets/tailwindLogo.svg"}/>
+        <SkillCard title="React" shortDescription={"The most popular Front-end libarary."} link={"https://react.dev/"} image={"src/assets/reactLogo.svg"}/>
+        <SkillCard title="Next JS" shortDescription={"React framework, organize your path scheme."} link={"https://nextjs.org/"} image={"src/assets/nextjsLogo.svg"}/>
+        <SkillCard title="Python" shortDescription={"The all in one of programming languages."} link={"https://www.python.org/"} image={"src/assets/pythonLogo.svg"}/>
+        <SkillCard title="Django" shortDescription={"Back-end framwork based in MVC model."} link={"https://www.djangoproject.com/"} image={"src/assets/djangoLogo2.svg"}/>
+        <SkillCard title="SQL" shortDescription={"Relational data base most used."} link={"https://www.w3schools.com/sql/sql_intro.asp"} image={"src/assets/sqlLogo2.svg"}/>
+        <SkillCard title="MongoDB" shortDescription={"No relational data base most used."} link={"https://www.mongodb.com/"} image={"src/assets/mongodbLogo.svg"}/>
+      </div>
+    </div>
     </>
+
   )
 }
