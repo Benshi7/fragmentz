@@ -1,10 +1,17 @@
 import React from 'react';
 import './App.css';
+<<<<<<< HEAD
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Home from './components/Home';
 import SkillsPage from './components/SkillsPage';
 import ContactPage from './components/ContactPage';
+=======
+import Header from './Header/Header';
+import Footer from './Footer/Footer';
+import Home from './Home/Home';
+import SkillsPage from './SkillsPage/SkillsPage';
+>>>>>>> origin/nextui-nico
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import StarrySky from './components/StarrySky';
 
