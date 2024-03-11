@@ -3,7 +3,6 @@ import { ScrollParallax } from 'react-just-parallax'
 import { BackgroundCircles } from '../design/Hero'
 import EngineerSvg from '../../assets/svgs/undraw_software_engineer.svg'
 
-
 function SkillCard ({ title, description, imageSrc, imageAlt }) {
   return (
     <section className="flex flex-col mt-8 ml-5 w-6/12 max-md:ml-0 max-md:w-full">
