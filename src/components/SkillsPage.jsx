@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export function SkillCard({title, shortDescription, link, image}) {
   return (
     <div className="mx-8 my-8 flex sm:justify-center">
-      <div className="w-full relative h-74 sm:w-80" >
+      <div className="w-full relative h-74 sm:w-80">
       <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-christalle-700 to-indigo-500 transform scale-[0.80] bg-christalle-500 rounded-full blur-3xl" />
       <div className="relative shadow-xl bg-background border border-gray-900 px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
           <div className="h-5 w-5 rounded-full border flex items-center justify-center mb-2 border-gray-500">
