@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Input } from '@nextui-org/react'
 import { Textarea } from '@nextui-org/react'
-import { Spotlight } from '../ui/Spotlight'
+import { Spotlight } from '../../ui/Spotlight'
 import ContactText from './ContactText'
-import { TypewriterEffectSmooth } from '../ui/typewriter-effect'
+import { TypewriterEffectSmooth } from '../../ui/typewriter-effect'
 import axios from 'axios'
 
 const words = [

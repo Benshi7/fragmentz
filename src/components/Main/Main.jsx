@@ -1,10 +1,5 @@
 import React, { useRef } from 'react'
-import { ScrollParallax } from 'react-just-parallax'
 import { Button } from '@nextui-org/react'
-import { BackgroundCircles } from '../design/Hero'
-import ProgrammerSvg from '../../assets/svgs/undraw_programming_re_kg9v.svg'
-import StarrySky from '../StarrySky'
-
 
 function Main () {
   const parallaxRef = useRef(null)
@@ -53,7 +48,7 @@ function ServiceImage () {
     <div className="hidden flex-col w-[25%] max-md:ml-0 max-md:w-[66%] md:w-[36%] sm:w-[55%] md:flex mr-12">
       <img
         loading="lazy"
-        src={ProgrammerSvg}
+        src='https://i.imgur.com/Et0ZpX0.png'
         alt="Web Development Service"
         className="grow w-full aspect-[1.37] max-md:mt-10"
       />
