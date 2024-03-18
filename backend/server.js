@@ -1,6 +1,8 @@
 const express = require('express')
 const cors = require('cors')
 const nodemailer = require('nodemailer')
+const mongoose = require('mongoose')
+const url = 'mongodb+srv://fragmentzdevelop:5bn7VsTUJrgEsAUY@cluster0.qakdtsc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
 
 const app = express()
 const PORT = process.env.PORT || 5000
@@ -15,47 +17,43 @@ const corsOptions = {
 
 app.use(cors(corsOptions)) // Habilitar CORS para todas las rutas con opciones personalizadas
 
-// Ruta para enviar el correo electrónico
-app.post('/send-email', async (req, res) => {
-  const { name, email, reason, phone, message } = req.body
-
-  // Configurar el transporter para enviar correo electrónico usando nodemailer
-  let transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    service: 'gmail',
-    port: 465,
-    secure: true, // use SSL
-    auth: {
-
-    }
-  });
-  // Configurar el correo electrónico
-  let mailOptions = {
-    from: 'tuCorreo@gmail.com', // posiblemente no haga falta tener un remitente, o podemos poner acá el email que llenen en el form, pero no estoy seguro ni es necesario
-    to: 'fragmentz@dev.com',
-    subject: 'Nuevo correo electrónico de cliente',
-    text: `
-      Has recibido un nuevo correo electrónico de cliente:
-      Name: ${name}
-      Email: ${email}
-      Reason: ${reason}
-      Phone: ${phone}
-      Message: ${message}
-    `
-  }
-
-  // Enviar el mail usando el transporter de nodemailer
-  try {
-    await transporter.sendMail(mailOptions)
-    console.log('Correo electrónico enviado con éxito:', mailOptions)
-    res.sendStatus(200)
-  } catch (error) {
-    console.error('Error al enviar el correo electrónico:', error)
-    res.sendStatus(500)
-  }
+// Conexión a MongoDB Atlas
+mongoose.connect(url, {
+  // useNewUrlParser: true,
+  // useUnifiedTopology: true
 })
+.then(() => console.log('Conexión a MongoDB Atlas exitosa'))
+.catch(err => console.error('Error al conectar a MongoDB Atlas:', err));
+
+// Definir el esquema de los correos electrónicos
+const emailSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  reason: String,
+  phone: String,
+  message: String
+});
+
+const Email = mongoose.model('Email', emailSchema);
+
+// Ruta para recibir el formulario del cliente y guardar en la base de datos
+app.post('/receive-form', async (req, res) => {
+  const { name, email, reason, phone, message } = req.body;
+
+  try {
+    // Guardar los datos del formulario en la base de datos
+    const newEmail = new Email({ name, email, reason, phone, message });
+    await newEmail.save();
+
+    // Enviar una respuesta al cliente para indicar que los datos se han guardado correctamente
+    res.status(200).json({ message: 'Formulario recibido correctamente' });
+  } catch (error) {
+    console.error('Error al recibir el formulario:', error);
+    res.status(500).json({ error: 'Ocurrió un error al procesar el formulario' });
+  }
+});
 
 // Iniciar el servidor node
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`)
-})
+  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+});
