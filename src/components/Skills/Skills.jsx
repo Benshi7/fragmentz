@@ -33,7 +33,7 @@ export default function Skills () {
           <article className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full md:w-[45%] sm:w-[46%]">
             <img
               loading="lazy"
-              src={EngineerSvg}
+              src='https://i.imgur.com/NQNRjY6.png'
               alt="Decorative"
               className="w-full aspect-[1.59] max-md:mt-10"
             />

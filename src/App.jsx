@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Home from './components/Home';
-import SkillsPage from './components/SkillsPage';
-import ContactPage from './components/ContactPage';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import SkillsPage from './components/Skills/SkillsPage';
+import ContactPage from './components/Contact/ContactPage';
 import StarrySky from './components/StarrySky';
 import ProjectPage from './components/ProjectPage';
 import About from './components/About';
