@@ -34,14 +34,18 @@ function ServiceDescription () {
         <h2 className="text-2xl self-start font-bold tracking-normal leading-5 text-violet-500 max-md:max-w-full">
           Fancy projects for your ideas!
         </h2>
+        <h3>
+          
+        </h3>
         <p className="text-justify mt-4 text-lg tracking-normal leading-5 text-secondary max-md:max-w-full md:text-lg sm:text-md whitespace-pre-wrap">
           You can explore our web development services without technical expertise. </p>
           <p className="text-justify text-lg tracking-normal leading-5 text-secondary max-md:max-w-full md:text-lg sm:text-md whitespace-pre-wrap">
           Once you have contacted us, we will guide you through the process of creating your ideal website!</p>
+       
         <div className="flex max-md:mt-10">
-        <Button className="z-50 self-start w-32 px-5 py-4 mt-9 text-base font-semibold tracking-normal rounded-lg bg-violet-950 text-secondary" tabIndex="0">
+         {/* <Button className="z-50 self-start w-32 px-5 py-4 mt-9 text-base font-semibold tracking-normal rounded-lg bg-violet-950 text-secondary" tabIndex="0">
           Learn More
-        </Button>
+        </Button>*/} 
         </div>
       </div>
     </div>
