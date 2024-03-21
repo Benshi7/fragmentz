@@ -8,16 +8,13 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cors());
 
-// Conexión a MongoDB Atlas
 const mongoURI = 'mongodb+srv://fragmentzdevelop:5bn7VsTUJrgEsAUY@cluster0.qakdtsc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
-mongoose.connect(mongoURI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
+
+mongoose.connect(mongoURI)
 .then(() => console.log('Conexión a MongoDB Atlas exitosa'))
 .catch(err => console.error('Error al conectar a MongoDB Atlas:', err));
 
-// Definir el modelo de correo electrónico
+// Modelo de Mongoose para el formulario de correo electrónico
 const emailSchema = new mongoose.Schema({
   name: String,
   email: String,
@@ -26,7 +23,7 @@ const emailSchema = new mongoose.Schema({
   message: String
 });
 
-const Email = mongoose.model('Email', emailSchema);
+const Email = mongoose.model('Email', emailSchema); // uso el esquema para crear el modelo
 
 // Ruta para recibir el formulario de correo electrónico y guardar en la base de datos
 app.post('/send-email', async (req, res) => {
