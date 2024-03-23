@@ -20,6 +20,11 @@ const Header = () => {
           </NavbarItem>
           <NavbarItem>
             <Link aria-current="page" color="secondary">
+              <NavLink to="/about" exact>About</NavLink>
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link aria-current="page" color="secondary">
               <NavLink to="/skills" exact>Skills</NavLink>
             </Link>
           </NavbarItem>
