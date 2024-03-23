@@ -35,7 +35,7 @@ const ContactPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/send-email', formData);
+      await axios.post('https://fragmentz-backend-5wpos64zpa-rj.a.run.app/send-email', formData);
       alert('Correo electrónico enviado con éxito');
     } catch (error) {
       console.error('Error al enviar el correo electrónico:', error);

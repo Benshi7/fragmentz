@@ -41,6 +41,16 @@ app.post('/send-email', async (req, res) => {
   }
 });
 
+app.get('/emails', async (req, res) => {
+  try {
+    const emails = await Email.find(); // Recuperar todos los correos electrónicos de la base de datos
+    res.status(200).json(emails); // Devolver los correos electrónicos como respuesta
+  } catch (error) {
+    console.error('Error al obtener correos electrónicos:', error);
+    res.status(500).json({ error: 'Ocurrió un error al obtener correos electrónicos' });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
